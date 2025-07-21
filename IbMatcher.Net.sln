@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbMatcher.Net", "IbMatcher.Net\IbMatcher.Net.csproj", "{CE23E967-461D-4B77-A5B6-602632FF1FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbMatcher.Example", "IbMatcher.Example\IbMatcher.Example.csproj", "{E0648414-9AE4-4928-9436-454D5FE473C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE23E967-461D-4B77-A5B6-602632FF1FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE23E967-461D-4B77-A5B6-602632FF1FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE23E967-461D-4B77-A5B6-602632FF1FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE23E967-461D-4B77-A5B6-602632FF1FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0648414-9AE4-4928-9436-454D5FE473C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0648414-9AE4-4928-9436-454D5FE473C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0648414-9AE4-4928-9436-454D5FE473C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0648414-9AE4-4928-9436-454D5FE473C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9101610F-22BE-4FC9-973F-C1E19C0CC4DD}
+	EndGlobalSection
+EndGlobal
