@@ -14,34 +14,54 @@ namespace IbMatcher.Net
         None = 0,
 
         /// <summary>
-        /// Full ASCII notation (e.g., "pin yin")
+        /// 简拼 - Ascii notation but only using the first letter of each syllable (e.g., "p", "y")
         /// </summary>
-        Ascii = 1 << 0,
+        AsciiFirstLetter = 0x1,
 
         /// <summary>
-        /// Ascii notation but only using the first letter of each syllable (e.g., "py")
+        /// 全拼 - Full ASCII notation (e.g., "pin", "yin")
         /// </summary>
-        AsciiFirstLetter = 1 << 1,
+        Ascii = 0x2,
 
         /// <summary>
-        /// ASCII notation with numbers (e.g., "pin1 yin1")
+        /// 带声调全拼 - ASCII notation with numbers (e.g., "pin1", "yin1")
         /// </summary>
-        AsciiWithTone = 1 << 2,
+        AsciiTone = 0x4,
 
         /// <summary>
-        /// ASCII with first letter and tone number (e.g., "p1y1")
+        /// Unicode with tone marks (e.g., "pīn", "yīn")
         /// </summary>
-        AsciiFirstLetterWithTone = 1 << 3,
+        Unicode = 0x8,
 
         /// <summary>
-        /// Unicode with tone marks (e.g., "pīn yīn")
+        /// 智能 ABC 双拼
         /// </summary>
-        Unicode = 1 << 4,
+        DiletterAbc = 0x10,
 
         /// <summary>
-        /// Unicode with tone marks but only using the first letter of each syllable (e.g., "pī")
+        /// 拼音加加双拼
         /// </summary>
-        UnicodeFirstLetter = 1 << 5,
+        DiletterJiajia = 0x20,
+
+        /// <summary>
+        /// 微软双拼
+        /// </summary>
+        DiletterMicrosoft = 0x40,
+
+        /// <summary>
+        /// 华宇双拼（紫光双拼）
+        /// </summary>
+        DiletterThunisoft = 0x80,
+
+        /// <summary>
+        /// 小鹤双拼
+        /// </summary>
+        DiletterXiaohe = 0x100,
+
+        /// <summary>
+        /// 自然码双拼
+        /// </summary>
+        DiletterZrm = 0x200,
 
         /// <summary>
         /// Common set of notations: Ascii and AsciiFirstLetter
