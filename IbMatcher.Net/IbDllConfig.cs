@@ -2,7 +2,7 @@ using System.IO;
 
 namespace IbMatcher.Net
 {
-    public class IbDllConfig
+    public static class IbDllConfig
     {
         private static string? _dllPath;
 
@@ -17,6 +17,11 @@ namespace IbMatcher.Net
                 }
                 _dllPath = value;
             }
+        }
+
+        public static void Init()
+        {
+            NativeMethods.Init();
         }
     }
 }

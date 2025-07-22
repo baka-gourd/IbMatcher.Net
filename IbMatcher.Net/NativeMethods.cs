@@ -10,6 +10,26 @@ namespace IbMatcher.Net
     {
         private const string DllName = "ib_matcher";
 
+        internal static void Init()
+        {
+            if (string.IsNullOrEmpty(IbDllConfig.DllPath)) return;
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                if (IbDllConfig.DllPath != null) LoadLibrary(IbDllConfig.DllPath);
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ||
+                     RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                if (IbDllConfig.DllPath != null) dlopen(IbDllConfig.DllPath, 2);
+            }
+        }
+
+        [DllImport("kernel32", SetLastError = true, CharSet = CharSet.Unicode)]
+        private static extern IntPtr LoadLibrary(string lpFileName);
+
+        [DllImport("libdl")]
+        private static extern IntPtr dlopen(string filename, int flags);
+
         /// <summary>
         /// Opaque handle type for IbMatcher
         /// </summary>
