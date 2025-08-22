@@ -15,12 +15,12 @@ namespace IbMatcher.Net
             if (string.IsNullOrEmpty(IbDllConfig.DllPath)) return;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                if (IbDllConfig.DllPath != null) LoadLibrary(IbDllConfig.DllPath);
+                LoadLibrary(IbDllConfig.DllPath);
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ||
                      RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                if (IbDllConfig.DllPath != null) dlopen(IbDllConfig.DllPath, 2);
+                dlopen(IbDllConfig.DllPath, 2);
             }
         }
 

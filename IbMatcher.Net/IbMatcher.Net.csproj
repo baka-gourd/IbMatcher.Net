@@ -20,4 +20,10 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ib_matcher.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
